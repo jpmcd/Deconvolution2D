@@ -22,4 +22,4 @@ MakeRecoveryTables.wl - Script computing monotonized and supremum
                         function envelopes (tables). Pre-computed
                         tables can be loaded. Also computes tables for
                         matrix norms, bump wave coefficients, and
-                        recovery stats, and saves in DAT files.
+                        recovery results.
