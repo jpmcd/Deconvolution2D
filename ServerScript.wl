@@ -1,5 +1,3 @@
-(* ::Package:: *)
-
 (*SetDirectory[NotebookDirectory[]];*)
 
 Import["TwoDimBumpWave.wl"]
@@ -10,7 +8,7 @@ numGridPoints = 400;
 GridWidth = 10.;
 GridSpacing = GridWidth/numGridPoints;
 numGridIntervals = 20;
-gridSizes = {.1,.15,.2,.25,.3,.35,.4,.45,.5,.55,.6,.65,.7};
+gridSizes = {.1,.15,.2,.25,.3,.35,.4,.45,.5,.55,.6,.65,.7,.75,.8,.85,.89};
 epsG = 10^(-10);
 tailG = 10;
 KG[x_,y_] = Exp[-(x^2+y^2)/2];
@@ -24,5 +22,5 @@ temp = fixGradientDivisionByZero[funListGauss,4,5,8];
 funListGauss[[4]] = temp;
 
 (*Save tables*)
-Do[Export[ToString[StringForm["./flg_20190401_``.mat",i]],funListGauss[[All,All,All,i]],"MAT"],{i,Dimensions[funListGauss][[4]]}];
+Do[Export[ToString[StringForm["./flg_20190618_``.mat",i]],funListGauss[[All,All,All,i]],"MAT"],{i,Dimensions[funListGauss][[4]]}];
 Quit[]
