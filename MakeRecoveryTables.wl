@@ -16,12 +16,12 @@ KG[x_,y_] = Exp[-(x^2+y^2)/2];
 
 
 (*Import sub-segment to cell distances. Distances are computed in script segmentdistances.m with MATLAB CVX package.*)
-(*dists = importMatrix["partition_dists_20190329_npartitions_50.mat"];*)
 dists = importMatrix["partition_dists_20191108_npartitions_100.mat"];
+
+
 (*Import previously built envelopes.*)
 FLS = Import["~/Data/Supremums_20190531.mat"];
 FLM = Import["~/Data/Monotones_20190831.mat"];
-
 
 (*To build monotone and supremum envelopes uncomment and run following cells.*)
 (*FLG = compileTables[];*)
